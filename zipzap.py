@@ -10,3 +10,10 @@
 
 if __name__ == '__main__':
     pass
+
+for i in range(101):
+    if i % 15 == 0:
+        print('zip-zap')
+    else:
+        print(i)
+
