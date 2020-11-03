@@ -11,9 +11,13 @@
 if __name__ == '__main__':
     pass
 
-for i in range(101):
+for i in range(1, 101):
     if i % 15 == 0:
         print('zip-zap')
+    elif i % 3 == 0:
+        print('zip')
+    elif i % 5 == 0:
+        print('zap')
     else:
         print(i)
 
