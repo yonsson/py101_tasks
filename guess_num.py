@@ -14,5 +14,23 @@
 Тебе может понадобится модуль random, цикл while и ветвления
 """
 
-if __name__ == '__main__':
-    pass
+import random
+hidden_number = random.randint(0, 1000000)
+
+print('Привет! Я загадал тебе целое число до миллиона, угадай его!')
+entered_line = input('Введи число:')
+while entered_line != 'exit':
+    try:
+        entered_number = int(entered_line)
+    except ValueError:
+        print('Нужно ввести именно целое число!')
+        entered_line = input('Введи число:')
+        continue
+    if entered_number < hidden_number:
+        print('Не угадал, загаданное число больше.')
+    elif entered_number > hidden_number:
+        print('Не угадал, загаданное число меньше.')
+    else:
+        print('Угадал!')
+        exit(0)
+    entered_line = input('Введи число:')
