@@ -6,5 +6,12 @@
 включая цифры и алфавитные символы
 """
 
-if __name__ == '__main__':
-    pass
+from re import findall
+
+pattern = "^.*(?=.{8,})(?=.*\d)(?=.*[a-z|а-я]).*$"
+password = input("Введите пароль: ")
+
+if findall(pattern, password):
+    print("Сложный")
+else:
+    print("Простой")
